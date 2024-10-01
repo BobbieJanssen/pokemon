@@ -29,10 +29,13 @@ public class Main {
 
         zapdos.boltStrike(charizard, true);
         zapdos.wildCharge(venusaur, true);
+
         charizard.flameThrower(blastoise);
         charizard.flameThrower(venusaur);
+
         venusaur.seedFlare(zapdos, false);
         venusaur.grassWhistle(blastoise, false, false);
+
         blastoise.rainDance(charizard, true, false);
         blastoise.muddyWater(zapdos, true);
     }
