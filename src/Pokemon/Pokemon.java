@@ -4,46 +4,47 @@ abstract class Pokemon {
     private String name;
     private int level;
     private double hp;
-    private double xp;
+    private int xp;
 
     public abstract void eats();
     public abstract void speaks();
 
-    public Pokemon (String name, int level, double hp, double xp) {
+    public void theChosenOne() {
+        System.out.println("I Choose you!");
+    }
+
+    public Pokemon (String name, int level, double hp, int xp) {
         this.name = name;
         this.level = level;
         this.hp = hp;
         this.xp = xp;
     }
 
-    public void setName(String NewName) {
-        name = NewName;
+    public void setName(String newName) {
+        this.name = newName;
     }
-
     public String getName() {
         return name;
     }
 
     public void setLevel(int newLevel) {
-        level = NewLevel;
+        this.level = newLevel;
     }
-
-    public Int getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public void setHp(double newHp) {
-        hp = NewHp;
+    public void setHp(int newHp) {
+        this.hp = newHp;
     }
-
     public double getHp() {
         return hp;
     }
-    public void setXp(double newXp) {
-        xp = NewXp;
-    }
 
-    public double getXp() {
-        return name;
+    public void setXp(int newXp) {
+        this.xp = newXp;
+    }
+    public int getXp() {
+        return xp;
     }
 }
