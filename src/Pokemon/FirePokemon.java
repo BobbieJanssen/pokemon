@@ -24,7 +24,7 @@ public class FirePokemon extends Pokemon {
     }
 
     @Override public void theChosenOne() {
-        System.out.println("I choose Fire Pokémon " + getName() + "!");
+        System.out.println("I choose Fire Pokémon " + getName() + "!\n");
     }
 
     public static int flameThrower(Pokemon target) {
@@ -47,20 +47,20 @@ public class FirePokemon extends Pokemon {
     public void shellTrap(Pokemon target, boolean hitByPhysicalMove, boolean hasFiriumZ) {
        if (hitByPhysicalMove) {
             int basePower = hasFiriumZ ? 200 : 150;
-            System.out.println("Shell Trap was triggered! Base Power: " + basePower);
+            System.out.println("Shell Trap was triggered! Base Power: " + basePower + "\n");
 
             double newHp = target.getHp() - basePower;
             target.setHp((int) newHp);
             System.out.println(target.getName() + "'s HP is now " + target.getHp());
         } else {
-            System.out.println("The trap did not trigger.");
+            System.out.println("It's your lucky day! The trap did not trigger.\n");
         }
     }
 
     public void eats() {
-        System.out.println("Fire Pokemon loves to eat corn, but he keeps burning it into popcorn.");
+        System.out.println("Fire Pokemon loves to eat corn, but he keeps burning it into popcorn.\n");
     }
     public void speaks() {
-        System.out.println("Fire Pokemon says: kriii kriii.");
+        System.out.println("Fire Pokemon says: kriii kriii.\n");
     }
 }

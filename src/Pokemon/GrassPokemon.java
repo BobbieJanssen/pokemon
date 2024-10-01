@@ -27,7 +27,7 @@ public class GrassPokemon extends Pokemon {
     }
 
     @Override public void theChosenOne() {
-        System.out.println("I choose Grass Pokémon " + getName() + "!");
+        System.out.println("I choose Grass Pokémon " + getName() + "!\n");
     }
 
     public void seedFlare (Pokemon target, boolean hasGrassiumZ) {
@@ -44,25 +44,25 @@ public class GrassPokemon extends Pokemon {
         System.out.println(target.getName() + "'s HP is now " + target.getHp());
 
         if (Math.random() < 0.4) {
-            System.out.println(getName() + "'s Special Defense is lowered by 2 stages!");
+            System.out.println(getName() + "'s Special Defense is lowered by 2 stages!\n");
         } else {
-            System.out.println(getName() + " is not affected by the Special Defense lowering effect");
+            System.out.println(getName() + " is not affected by the Special Defense lowering effect.\n");
         }
     }
 
     public void grassWhistle (Pokemon target, boolean hasInsomnia, boolean hasVitalSpirit) {
         if (hasInsomnia || hasVitalSpirit) {
-            System.out.println(getName() + " cannot be put to sleep.");
+            System.out.println(getName() + " cannot be put to sleep.\n");
         } else {
-            System.out.println(getName() + " is put asleep for 3 rounds.");
+            System.out.println(getName() + " is put asleep for 3 rounds.\n");
         }
     }
 
     public void eats() {
-        System.out.println("Grass Pokemon loves to eat moss-covered rocks and oran berries.");
+        System.out.println("Grass Pokemon loves to eat moss-covered rocks and oran berries.\n");
     }
 
     public void speaks() {
-        System.out.println("Grass Pokemon says: rustle rustle.");
+        System.out.println("Grass Pokemon says: rustle rustle.\n");
     }
 }

@@ -27,7 +27,7 @@ public class WaterPokemon extends Pokemon {
     }
 
     @Override public void theChosenOne() {
-        System.out.println("I choose Water Pokémon " + getName() + "!");
+        System.out.println("I choose Water Pokémon " + getName() + "!\n");
     }
 
     public void rainDance(Pokemon target, boolean isFireType, boolean hasWateriumZ) {
@@ -48,7 +48,7 @@ public class WaterPokemon extends Pokemon {
             opponentHp = target.getHp() * 0.8;
         }
         System.out.println(getName() + "'s HP is now: " + opponentHp);
-        System.out.println("The status is now " + newHp + " versus " + opponentHp + ".");
+        System.out.println("The status is now " + newHp + " versus " + opponentHp + ".\n");
     }
 
     public int muddyWater(Pokemon target, boolean hasWateriumZ) {
@@ -66,18 +66,20 @@ public class WaterPokemon extends Pokemon {
             round++;
             accuracy--;
             if (Math.random() < 0.3) {
-                System.out.println("The target's accuracy is lowered. Accuracy is now: " + accuracy);
+                System.out.println("The target's accuracy is lowered. Accuracy is now: " + accuracy + "\n");
             } else {
                 round++;
-                System.out.println("The target's accuracy is not lowered.");
+                System.out.println("The target's accuracy is not lowered.\n");
             }
         } return (int) (accuracy * 100);
-    }
-        public void eats () {
-            System.out.println("Water Pokemon loves to eat crab, but became a pescatarian so now it's seaweed.");
         }
+
+        public void eats () {
+            System.out.println("Water Pokemon loves to eat crab, but became a pescatarian so now it's seaweed.\n");
+        }
+
         public void speaks () {
-            System.out.println("Water Pokemon says: gurgle gurle.");
+            System.out.println("Water Pokemon says: gurgle gurle.\n");
         }
     }
 

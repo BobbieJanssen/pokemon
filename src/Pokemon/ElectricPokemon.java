@@ -24,7 +24,7 @@ public class ElectricPokemon extends Pokemon {
     }
 
     @Override public void theChosenOne() {
-        System.out.println("I choose Electric Pokémon " + getName() + "!");
+        System.out.println("I choose Electric Pokémon " + getName() + "!\n");
     }
 
     public static int boltStrike( Pokemon target, boolean hasElectriumZ) {
@@ -42,18 +42,38 @@ public class ElectricPokemon extends Pokemon {
         System.out.println(target.getName() + "'s HP is now " + target.getHp());
 
         if (Math.random() < 0.2) {
-            System.out.println(target.getName() + " is paralyzed!");
+            System.out.println(target.getName() + " is paralyzed!\n\n");
         } else {
-            System.out.println(target.getName() + " is not paralyzed.");
+            System.out.println(target.getName() + " is not paralyzed.\n\n");
         }
 
         return basePower;
     }
 
+    public void wildCharge (Pokemon target, boolean hasElectriumZ) {
+        int basePower = hasElectriumZ ? 175 : 90;
+
+        if(hasElectriumZ) {
+            System.out.println(target.getName() + " is using Wild Charge with Electrium Z! Wild Charge turns into Gigavolt Havoc with base power: " + basePower);
+        } else {
+            System.out.println(target.getName() + " is using Wild Charge! Base Power: " + basePower);
+        }
+
+        if(Math.random() < 0.8) {
+            System.out.println("The attack cost you 100 HP damage. The status is now " + (target.getHp() - 100) + " versus " + (getHp() - 25));
+        } else if (Math.random() < 0.6) {
+            System.out.println("The attack cost you 80 HP damage. The status is now " + (target.getHp() - 80) + " versus " + (getHp() - 20));
+        } else if (Math.random() < 0.4) {
+            System.out.println("The attack cost you 60 HP damage. The status is now " + (target.getHp() - 60) + " versus " + (getHp() - 15));
+        } else {
+            System.out.println("The attack cost you 20 HP damage. The status is now " + (target.getHp() - 20) + " versus " + (getHp() - 5));
+        }
+    }
+
     public void eats() {
-        System.out.println("Electric Pokémon's favourite snack are watmel berries.");
+        System.out.println(getName() + "'s favourite snack are watmel berries.\n");
     }
     public void speaks() {
-        System.out.println("Electric Pokémon says: Zzzzzzzt-bzzrr ");
+        System.out.println(getName() + " says: Zzzzzzzt-bzzrr.\n ");
     }
 }
