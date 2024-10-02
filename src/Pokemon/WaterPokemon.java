@@ -75,11 +75,11 @@ public class WaterPokemon extends Pokemon {
         }
 
         public void eats () {
-            System.out.println("Water Pokemon loves to eat crab, but became a pescatarian so now it's seaweed.\n");
+            System.out.println(getName() + " loves to eat crab, but became a pescatarian so now it's seaweed.\n");
         }
 
         public void speaks () {
-            System.out.println("Water Pokemon says: gurgle gurle.\n");
+            System.out.println(getName() + " says: gurgle gurle.\n");
         }
     }
 

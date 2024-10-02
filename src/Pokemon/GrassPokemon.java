@@ -59,10 +59,10 @@ public class GrassPokemon extends Pokemon {
     }
 
     public void eats() {
-        System.out.println("Grass Pokemon loves to eat moss-covered rocks and oran berries.\n");
+        System.out.println(getName() + " loves to eat moss-covered rocks and oran berries.\n");
     }
 
     public void speaks() {
-        System.out.println("Grass Pokemon says: rustle rustle.\n");
+        System.out.println(getName() + " says: rustle rustle.\n");
     }
 }
