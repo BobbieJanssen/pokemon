@@ -58,9 +58,9 @@ public class FirePokemon extends Pokemon {
     }
 
     public void eats() {
-        System.out.println("Fire Pokemon loves to eat corn, but he keeps burning it into popcorn.\n");
+        System.out.println(getName() + " loves to eat corn, but he keeps burning it into popcorn.\n");
     }
     public void speaks() {
-        System.out.println("Fire Pokemon says: kriii kriii.\n");
+        System.out.println(getName() + " says: kriii kriii.\n");
     }
 }
